@@ -1,0 +1,7 @@
+#project-list{
+    display:grid;
+    grid-template-columns: 31% 31% 31%;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: white;
+}
