@@ -1,46 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
 
-.navbar {
-    background-color:antiquewhite;
-    color: #fff;
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+/* header */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 30px 5%;
     display: flex;
-    flex-direction: column;
+    /* background: transparent; */
+    background-color:#2b2b22;
     align-items: center;
-    padding: 20px 0;
-    text-align: center; 
+    z-index: 100;
 }
+/* .logo-image{
+    width:100px;
+    height:100px;
 
-/* logo */
-/* .logo-container {
-    margin-bottom: 20px;
 } */
-.navbar-logo {
-    width: 400px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-/* button */
-.nav-links ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; /* button horizontal */
-    gap: 10px; /* button gap */
-}
 
-/* button link */
-.nav-button {
-    display: inline-block;
-    text-decoration: none;
+
+.logo-link {
+    font-size: 30px;
     color: #fff;
-    background-color: #007bff;
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    flex:1;
-    min-width: 60px;
-    text-align: center;
-    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.social-media{
+    margin:0 auto 0 50px;
 }
 
-/* button hover */
-.nav-button:hover {
-    background-color: #0056b3; 
-} 
+.social-media a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: solid 2px #fff;
+    border-radius: 6px;
+    background: transparent;
+    text-decoration: none;
+    margin-right: 10px;
+    transition:all 0.3s linear;
+
+}
+.social-media a:hover{
+    background: #fff;
+}
+
+.social-media a i{
+    font-size: 20px;
+    color:#fff;
+    transition: all 0.3s linear ;
+}
+
+.social-media a i:hover{
+    color: #2b2b22;
+}
+
+.nav-btn {
+    display: inline-flex;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

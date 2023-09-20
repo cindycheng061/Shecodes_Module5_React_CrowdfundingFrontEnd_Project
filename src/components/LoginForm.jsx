@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login";
+import "./LoginForm.css"
+
 
 function LoginForm() {
     const navigate = useNavigate();
@@ -19,15 +21,18 @@ function LoginForm() {
         event.preventDefault();
         if (credentials.username && credentials.password) {
             postLogin(credentials.username,credentials.password).then((response) => {
-                // console.log(response);
-                window.localStorage.setItem("token", response.token);
-                navigate("/");
+              console.log("response from login: ", response);
+              window.localStorage.setItem("token", response.token);
+              window.localStorage.setItem("userId", response.user_id);
+              window.localStorage.setItem("is_login", response.is_login);
+              navigate("/");
             })
         }
     }
     return (
       <>
-        <form>
+        <form className="login-form">
+          <h1>Welcome back</h1>
           <div>
             <label htmlFor="username">Username:</label>
             <input

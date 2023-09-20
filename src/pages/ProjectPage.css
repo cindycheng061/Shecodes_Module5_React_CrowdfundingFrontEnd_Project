@@ -1,7 +1,19 @@
 #project-list{
     display:grid;
-    grid-template-columns: 31% 31% 31%;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: 32.5% 32.5% 32.5%;
+    column-gap: 20px;
+    row-gap: 20px;
     background-color: white;
+    margin: 150px auto;
+    max-width: 1200px;
+   
+}
+
+@media screen and (max-width:768px){
+    #project-list{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+    }
 }

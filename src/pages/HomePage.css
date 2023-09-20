@@ -1,0 +1,112 @@
+
+
+/* section */
+.banner {
+    position: relative;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+}
+.slider .slide {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.slide.active img{
+    opacity: 1;
+}
+
+
+.slide .slide-content {
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0s;
+}
+
+.slide.active .slide-content {
+    transform: translateX(0);
+    transition: 1s ease;
+}
+
+.slide-content h1 {
+    font-size: 60px;
+    color: #fff;
+    padding: 0 50px;
+    text-shadow:
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0px 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.slide-arrow {
+    position:absolute;
+    bottom:8%;
+    right:5%;
+    z-index:100;
+}
+
+.slide-arrow span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border:2px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+    margin-left: 25px;
+    transition:0.3s;
+}
+
+
+.slide-arrow span:nth-child(1){
+    background: transparent;
+}
+
+.slide-arrow span:nth-child(1):hover{
+    background: #fff;
+}
+
+
+.slide-arrow span i {
+    font-size:45px;
+    color:#444;
+    transition:0.4s;
+}
+
+.slide-arrow span:nth-child(1) i {
+    color:#fff;
+}
+
+.slide-arrow span:nth-child(1):hover i {
+    color:#444;
+}

@@ -1,64 +1,71 @@
 import { Link, Outlet } from "react-router-dom";
-import "./NavBar.css"
+import "./NavBar.css";
 
-// function NavBar() {
-//   return (
-//     <div>
-//       <nav>
-//         <Link to="/">Home</Link>
-//         <Link to="/project">Project</Link>
-//         <Link to="/login">Login</Link>
-//       </nav>
-//       <Outlet />
-//     </div>
-//   );
-// }
-// export default NavBar;
+import {
+  BiLogoLinkedin,
+  BiLogoGithub,
+  BiLogoFacebook,
+  BiLogoTwitter,
+} from "react-icons/bi";
+
 
 function NavBar() {
-  return (
-    <header className="navbar">
-      <div className="logo-container">
-        <img
-          src="https://i.ibb.co/mb1153D/Green-Line-art-Nature-Tree-Logo-removebg-preview.png"
-          alt="Logo"
-          className="navbar-logo"
-        />
-      </div>
-      <div>
-        <nav className="nav-links">
-          <ul>
-            <li>
-              <Link to="/" className="nav-button">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/project" className="nav-button">
-                Project
-              </Link>
-            </li>
-            <li>
-              <Link to="/" className="nav-button">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/login" className="nav-button">
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link to="/" className="nav-button">
-                Register
-              </Link>
-            </li>
-          </ul>
+    return (
+      <div className="header">
+        {/* <a href="#" className="logo">
+          GiftASeed.
+        </a> */}
+          <Link to ="/" className="logo-link"> GiftASeed.
+          </Link>
+         
+        
+        <div className="social-media">
+          <a href="https://github.com/cindycheng061">
+            <BiLogoGithub />
+          </a>
+          <a href="https://www.facebook.com/">
+            <BiLogoFacebook />
+          </a>
+          <a href="https://twitter.com/">
+            <BiLogoTwitter />
+          </a>
+          <a href="https://www.linkedin.com/in/xiaoxin-cheng-6a8155117/">
+            <BiLogoLinkedin />
+          </a>
+        </div>
+        <nav className="nav-bar">
+          <Link to="/" className="nav-btn">
+            Home
+          </Link>
+
+          <Link to="/about" className="nav-btn">
+            About
+          </Link>
+
+          <Link to="/createproject" className="nav-btn">
+            Create
+          </Link>
+
+          <Link to="/project" className="nav-btn">
+            Projects
+          </Link>
+
+          <Link to="/login" className="nav-btn">
+            Login
+          </Link>
+
+          <Link to="/register" className="nav-btn">
+            Register
+          </Link>
+
+          <Link to="/user" className="nav-btn">
+            Account
+          </Link>
         </nav>
         <Outlet />
       </div>
-    </header>
-  );
+    );
 }
+
 
 export default NavBar;

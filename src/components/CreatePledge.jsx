@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import postPledge from '../api/post-pledges';
+import "./CreatePledge.css"
 
 
 function CreatePledge(props) {
@@ -45,7 +46,7 @@ function CreatePledge(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='create-pledge-form'>
       <div>
         <label htmlFor="amount">Amount</label>
         <input
@@ -68,7 +69,7 @@ function CreatePledge(props) {
         <label htmlFor="anonymous">Anonymous Pledge</label>
         <input type="checkbox" id="anonymous" onChange={handleChecked} />
       </div>
-      <input type="submit" value="Pledge" />
+      <input type="submit" value="Pledge" className='pledge-form-btn' />
     </form>
   );
 }

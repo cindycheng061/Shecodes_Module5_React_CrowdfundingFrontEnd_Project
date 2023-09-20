@@ -1,0 +1,19 @@
+.about-content{
+    margin-top: 150px;
+
+
+}
+
+
+.about-content h1{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    margin: 50px auto;
+}
+.about-content p{
+    font-size: 1.3rem;
+    text-align: center;
+    margin:auto 50px;
+    line-height: 1.5;
+}

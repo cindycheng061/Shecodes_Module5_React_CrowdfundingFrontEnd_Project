@@ -1,0 +1,9 @@
+.user-projects-container{
+    display:grid;
+    grid-template-columns: 32.5% 32.5% 32.5%;
+    column-gap: 20px;
+    row-gap: 20px;
+    background-color: white;
+    margin: 150px auto;
+    max-width: 1200px;
+}

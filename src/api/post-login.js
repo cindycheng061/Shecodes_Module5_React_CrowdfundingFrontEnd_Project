@@ -11,16 +11,15 @@ async function postLogin(username, password) {
             "password": password,
         })
     });
-
     if (!response.ok) {
-        const fallbackError = "Error trying to login";
+        const fallbackError = "Error trying to post a pledge";
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);
-        })
+        });
         const errorMessage = data?.detail ?? fallbackError;
         throw new Error(errorMessage);
     }
-    return await response.json();
+return await response.json();
 }
 
 export default postLogin;
