@@ -1,12 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import "./NavBar.css";
 
-import {
-  BiLogoLinkedin,
-  BiLogoGithub,
-  BiLogoFacebook,
-  BiLogoTwitter,
-} from "react-icons/bi";
+
 
 
 function NavBar() {
@@ -26,20 +21,27 @@ function NavBar() {
           GiftASeed.
         </Link>
 
-        <div className="social-media">
+        {/* <div className="social-media">
           <a href="https://github.com/cindycheng061">
-            <BiLogoGithub />
+            
+            <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://www.facebook.com/">
-            <BiLogoFacebook />
+            
+            <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://twitter.com/">
-            <BiLogoTwitter />
+            
+            <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://www.linkedin.com/in/xiaoxin-cheng-6a8155117/">
-            <BiLogoLinkedin />
+           
+            <i class="fa-brands fa-github"></i>
           </a>
-        </div>
+        </div> */}
+
+
+
         <nav className="nav-bar">
           <Link to="/" className="nav-btn">
             Home
@@ -82,11 +84,11 @@ function NavBar() {
 
           {hasToken ? (
             <Link to="/" className="nav-btn" onClick={handleLogout}>
-            Logout
+              Logout
             </Link>
           ) : (
             <Link to="/login" className="nav-btn">
-            Login
+              Login
             </Link>
           )}
 

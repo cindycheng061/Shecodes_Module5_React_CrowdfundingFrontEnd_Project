@@ -8,6 +8,7 @@ async function getUser(userId) {
     });
     const errorMessage = data?.detail ?? fallbackError;
     throw new Error(errorMessage);
+    // return { errorMessage };
   }
 
   return await response.json();
