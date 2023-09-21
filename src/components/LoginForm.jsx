@@ -21,7 +21,7 @@ function LoginForm() {
         event.preventDefault();
         if (credentials.username && credentials.password) {
             postLogin(credentials.username,credentials.password).then((response) => {
-              console.log("response from login: ", response);
+              // console.log("response from login: ", response);
               window.localStorage.setItem("token", response.token);
               window.localStorage.setItem("userId", response.user_id);
               window.localStorage.setItem("is_login", response.is_login);

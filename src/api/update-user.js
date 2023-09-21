@@ -18,7 +18,7 @@ async function updateUser(userData, userId) {
     const errorMessage = data?.detail ?? fallbackError;
     throw new Error(errorMessage);
   }
-  console.log(userData);
+  // console.log(userData);
   return await response.json();
 }
 
