@@ -1,12 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
 import "./NavBar.css";
 
-import {
-  BiLogoLinkedin,
-  BiLogoGithub,
-  BiLogoFacebook,
-  BiLogoTwitter,
-} from "react-icons/bi";
+// import {
+//   BiLogoLinkedin,
+//   BiLogoGithub,
+//   BiLogoFacebook,
+//   BiLogoTwitter,
+// } from "react-icons/bi";
 
 
 function NavBar() {
@@ -19,7 +19,7 @@ function NavBar() {
           </Link>
          
         
-        <div className="social-media">
+        {/* <div className="social-media">
           <a href="https://github.com/cindycheng061">
             <BiLogoGithub />
           </a>
@@ -32,7 +32,7 @@ function NavBar() {
           <a href="https://www.linkedin.com/in/xiaoxin-cheng-6a8155117/">
             <BiLogoLinkedin />
           </a>
-        </div>
+        </div> */}
         <nav className="nav-bar">
           <Link to="/" className="nav-btn">
             Home
