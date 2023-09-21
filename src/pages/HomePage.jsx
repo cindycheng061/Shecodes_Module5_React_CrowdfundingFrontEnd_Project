@@ -32,7 +32,7 @@
 
 import React, { useState } from "react";
 import "./HomePage.css";
-// import { BiLogoLinkedin, BiLogoGithub, BiLogoFacebook, BiLogoTwitter, BiSolidChevronRight, BiSolidChevronLeft} from "react-icons/bi";
+import { BiLogoLinkedin, BiLogoGithub, BiLogoFacebook, BiLogoTwitter, BiSolidChevronRight, BiSolidChevronLeft} from "react-icons/bi";
 import NavBar from "../components/NavBar";
 
 

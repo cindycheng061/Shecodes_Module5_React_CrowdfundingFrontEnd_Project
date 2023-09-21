@@ -11,6 +11,7 @@ function ProjectCard(props) {
         <Link to={projectLink}>
           <img src={projectData.image}></img>
                 <h3>{projectData.title}</h3>
+                <h3>{ projectData.id}</h3>
         </Link>
       </div>
     );

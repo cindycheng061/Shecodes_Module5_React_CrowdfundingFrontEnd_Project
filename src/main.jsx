@@ -16,6 +16,7 @@ import AboutPage from './pages/AboutPage'
 import UpdateProjectPage from './pages/UpdateProjectPage'
 
 
+
 // const router = createBrowserRouter(
 //   [
 //     {
@@ -30,15 +31,25 @@ import UpdateProjectPage from './pages/UpdateProjectPage'
 //     }
 //   ]
 // )
+const isLogin = window.localStorage.getItem("is_login")
 const router = createBrowserRouter([
   // { path: "/", element: <NavBar /> },
   { path: "/", element: <HomePage /> },
-  { path: "/createproject/", element: <CreateProjectPage /> },
+  // { path: "/createproject/", element: <CreateProjectPage /> },
+  {
+    path: "/createproject",
+    element: (isLogin) ? <CreateProjectPage /> : <LoginPage />,
+  },
+
   { path: "/project/", element: <ProjectPage /> },
   { path: "/project/:id", element: <OneProjectPage /> },
   { path: "/login/", element: <LoginPage /> },
   { path: "/register/", element: <CreateUserPage /> },
-  { path: "/user/", element: <UserPage /> },
+  // { path: "/user/", element: <UserPage /> },
+  {
+    path: "/user",
+    element: (isLogin) ? <UserPage /> : <LoginPage />,
+  },
   { path: "/user/update", element: <UpdateUserPage /> },
   { path: "/about", element: <AboutPage /> },
   { path: "/project/:projectId/update", element: <UpdateProjectPage /> },
