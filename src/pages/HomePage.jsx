@@ -32,7 +32,6 @@
 
 import React, { useState } from "react";
 import "./HomePage.css";
-// import { BiLogoLinkedin, BiLogoGithub, BiLogoFacebook, BiLogoTwitter, BiSolidChevronRight, BiSolidChevronLeft} from "react-icons/bi";
 import NavBar from "../components/NavBar";
 
 
@@ -128,18 +127,10 @@ function Homepage() {
           ))}
           <div className="slide-arrow">
             <span className="prev-btn" onClick={prevSlide}>
-              {/* <BiSolidChevronLeft /> */}
-              <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-              />
+             ◀
             </span>
             <span className="next-btn" onClick={nextSlide}>
-              {/* <BiSolidChevronRight /> */}
-              <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-              />
+            ▶
             </span>
           </div>
         </div>

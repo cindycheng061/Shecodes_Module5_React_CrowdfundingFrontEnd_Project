@@ -19,6 +19,9 @@ const { project, isLoading, error } = useProject(projectData.id)
         <img src={project.image}></img>
         <h3>{project.title}</h3>
       </Link>
+      <div>
+        <PledgesProgressTable project={project} />
+      </div>
     </div>
   );
 }

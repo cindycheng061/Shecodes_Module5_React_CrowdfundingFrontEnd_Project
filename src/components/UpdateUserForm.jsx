@@ -105,7 +105,7 @@ function UpdateUserForm({ userId }) {
           onChange={handleChange}
         ></input>
       </div>
-      <input type="submit" value="Submit"></input>
+      <input type="submit" value="Submit" className="update-user-btn"></input>
     </form>
   );
 }

@@ -6,6 +6,7 @@ import NavBarTest2 from "../components/NavBarTest2";
 import CreatePledge from "../components/CreatePledge";
 import "./OneProjectPage.css"
 import PledgesProgressTable from "../components/PledgesProgressTable";
+import Footer from "../components/Footer";
 
 function OneProjectPage() {
   //here we use a hook that comes for free in react router called`useParams` to get the id from the URL so that we can pass it to our useProject hook;
@@ -50,7 +51,7 @@ function OneProjectPage() {
 
           {/* <h4>{`Is_open:${project.is_open}`}</h4> */}
           <h3 className="separator">|</h3>
-          <h3>{project.is_open ? "Activate" : "Not Activate"}</h3>
+          <h3>{project.is_open ? "Active" : "Inactive"}</h3>
         </div>
         <div>
           <PledgesProgressTable project={project} />
@@ -60,25 +61,25 @@ function OneProjectPage() {
         <div className="comments-container">
           <h1>Comments:</h1>
           <ul>
-          {project.pledges.map((item, id) => {
-            return (
-              <div key={id}>
-                {/* <li>Supporter: {item.supporter}</li>
+            {project.pledges.map((item, id) => {
+              return (
+                <div key={id}>
+                  {/* <li>Supporter: {item.supporter}</li>
                 <li>Amount: {item.amount}</li> */}
-                <li> {item.comment}</li>
-              </div>
-            );
-          })}
-        </ul>
+                  <li> {item.comment}</li>
+                </div>
+              );
+            })}
+          </ul>
         </div>
         {/* <h3>Pledges:</h3> */}
-        
+
         <div className="pledge-container">
           <h1>Send a pledge:</h1>
           <CreatePledge projectId={id} />
         </div>
-        
       </div>
+      <Footer />
     </>
   );
 }

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import UserProjects from "../components/UserProjects";
 import UserPledges from "../components/UserPledges";
 import "./UserPage.css"
+import Footer from "../components/Footer";
 
 
 
@@ -29,15 +30,16 @@ function UserPage() {
       <NavBar />
       <div className="user-page-container">
         <h1>Welcome {user.username}</h1>
-        <h1>First Name: {user.first_name}</h1>
-        <h1>Last Name: {user.last_name}</h1>
-        <h1>Email: {user.email}</h1>
+        <h3>First Name: {user.first_name}</h3>
+        <h3>Last Name: {user.last_name}</h3>
+        <h3>Email: {user.email}</h3>
         <Link to="/user/update">
-          <button>Update</button>
+          <button className="user-page-btn">Update</button>
         </Link>
       </div>
       <UserProjects />
       <UserPledges />
+      <Footer />
     </>
   );
 }

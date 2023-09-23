@@ -4,6 +4,7 @@ import ProjectCardTest from "../components/ProjectCardTest";
 import "./ProjectPage.css";
 import NavBar from "../components/NavBar";
 import NavBarTest2 from "../components/NavBarTest2";
+import Footer from "../components/Footer";
 
 
 
@@ -22,11 +23,11 @@ function ProjectPage() {
         <div id="project-list">
           {projects.map((item, key) => {
             // console.log(item);
-            return <ProjectCard key={key} projectData={item} />
-            
+            return <ProjectCard key={key} projectData={item} />;
+            // return <ProjectCardTest key={key} projectData={item} />;
           })}
-          
         </div>
+        <Footer />
       </div>
     );
 }

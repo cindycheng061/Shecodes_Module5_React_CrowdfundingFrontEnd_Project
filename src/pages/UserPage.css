@@ -1,3 +1,20 @@
 .user-page-container{
     margin-top: 200px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.user-page-btn{
+    height: 30px;
+    font-size: 1rem;
+    margin: 20px 10px;
+    padding:auto 20px;
+    width: 60px;
+}
+
+.user-page-btn:hover{
+    background-color: #2b2b22;
+    color: white;
+    
+    
 }

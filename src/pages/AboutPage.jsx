@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import "./AboutPage.css"
+import Footer from "../components/Footer";
 
 function AboutPage() {
     return (
@@ -38,6 +39,7 @@ function AboutPage() {
             generations to come.
           </p>
         </div>
+        <Footer />
       </div>
     );
 }

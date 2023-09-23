@@ -14,8 +14,8 @@
 
 /* mobile view */
 @media screen and (max-width: 768px) {
-  .create-project-form {
-    margin-top: 500px; 
+  .login-form {
+    margin-top: 300px; 
   }
 }
 

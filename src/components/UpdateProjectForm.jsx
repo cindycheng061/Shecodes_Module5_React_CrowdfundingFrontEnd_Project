@@ -98,7 +98,7 @@ const handleChecked = (e) => {
         <label htmlFor="is_open">Activate</label>
               <input id="is_open" type="checkbox" checked={projectData.is_open } onChange={handleChecked}></input>
       </div>
-      <input type="submit" value="Submit"></input>
+      <input type="submit" value="Submit" className="update-project-btn"></input>
     </form>
   );
 }

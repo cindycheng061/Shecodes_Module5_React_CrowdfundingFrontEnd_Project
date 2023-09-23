@@ -6,6 +6,7 @@ import "./NavBar.css";
 
 function NavBar() {
   const hasToken = window.localStorage.getItem("token");
+  const isLogin = window.localStorage.getItem("is_Login");
   const handleLogout = () => {
     window.localStorage.removeItem("token");
     window.localStorage.removeItem("userId");

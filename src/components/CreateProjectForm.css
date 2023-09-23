@@ -14,12 +14,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* mobile view */
+/* mobile view
 @media screen and (max-width: 768px) {
   .create-project-form {
     margin-top: 250px; 
   }
-}
+} */
 .create-project-form h1{
     text-align: center;
     font-size: 2rem;

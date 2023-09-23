@@ -172,27 +172,56 @@ function UserProjects() {
     return <p>Error: {error.message}</p>;
   }
 
+  // return (
+  //   <div>
+  //     <h2>User's Projects</h2>
+  //     <div className="user-projects-container">
+  //       {projects.map((item) => {
+  //         const projectId = item.id;
+  //         return (
+  //           <div key={projectId}>
+  //             <ProjectCard projectData={item} />
+  //             <button onClick={(e) => handleDelete(projectId, e)}>
+  //               Delete
+  //             </button>
+  //             <Link to={`/project/${projectId}/update`}>
+  //               <button>Edit</button>
+  //             </Link>
+  //           </div>
+  //         );
+  //       })}
+  //     </div>
+  //   </div>
+  // );
   return (
-    <div>
+    <div className="user-projects-container">
       <h2>User's Projects</h2>
-      <div className="user-projects-container">
-        {projects.map((item) => {
-          const projectId = item.id;
-          return (
-            <div key={projectId}>
-              <ProjectCard projectData={item} />
-              <button onClick={(e) => handleDelete(projectId, e)}>
-                Delete
-              </button>
-              <Link to={`/project/${projectId}/update`}>
-                <button>Edit</button>
-              </Link>
-            </div>
-          );
-        })}
+      <div className="user-projects-info">
+        {projects.length > 0 ? (
+          projects.map((item) => {
+            const projectId = item.id;
+            return (
+              <div key={projectId}>
+                <ProjectCard projectData={item} />
+                <button
+                  onClick={(e) => handleDelete(projectId, e)}
+                  className="user-project-btn"
+                >
+                  Delete
+                </button>
+                <Link to={`/project/${projectId}/update`}>
+                  <button className="user-project-btn">Edit</button>
+                </Link>
+              </div>
+            ); 
+          })
+        ) : (
+          <h3>You don't have any projects.</h3>
+        )}
       </div>
     </div>
   );
+
 }
 
 export default UserProjects;
